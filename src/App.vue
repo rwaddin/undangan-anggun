@@ -6,8 +6,8 @@ const is_open = ref(false);
 
 <template>
   <div class="w-screen h-screen overflow-hidden bg-amber-50">
-    <div class="grid grid-cols-3">
-      <div class="col-start-2 bg-blue-100 h-screen overflow-y-auto flex items-center justify-center flex-col gap-5 shadow" v-if="!is_open">
+    <div class="md:grid md:grid-cols-3">
+      <div class="md:col-start-2 bg-blue-100 h-screen overflow-y-auto flex items-center justify-center flex-col gap-5 shadow" v-if="!is_open">
         <p>THE WEDDING OF</p>
         <p class="text-3xl font-bold">Anggun & Mr x</p>
         <p>Kepada Bapak/Ibu/Saudara/i</p>
