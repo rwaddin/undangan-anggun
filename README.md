@@ -1,27 +1,5 @@
-# undangan-anggun
+# Cara reusable
 
-Undangan nikah digital
-
-[Web](https://anggun.web.id)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+1. isi data di `src/assets/brides.json`
+2. hardcode ubah nama bride mounted di `src/App.vue` 
+3. setup firebase untuk ucapan

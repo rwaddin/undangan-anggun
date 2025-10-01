@@ -1,0 +1,22 @@
+{
+  "anggunfery": {
+    "girl": "Anggun Wijayanti",
+    "girlUname": "Anggun",
+    "boy": "Feri Andrianto",
+    "boyUname": "Feri",
+    "boyParentMom" : "xxx",
+    "boyParentDad" : "xxx",
+    "wallets" : [
+      {
+        "bank": "BCA",
+        "name": "Feri Andrianto",
+        "number": "4221355029"
+      },
+      {
+        "bank": "BRI",
+        "name": "Anggun Wijayanti",
+        "number": "311701030259536"
+      }
+    ]
+  }
+}

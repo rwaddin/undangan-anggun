@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "rochester";
+  src: url("@/assets/fonts/Rochester/Rochester-Regular.ttf");
+}
+
+@font-face {
+  font-family: "cookie";
+  src: url("@/assets/fonts/Cookie/Cookie-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("@/assets/fonts/Ubuntu_Condensed/UbuntuCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("@/assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "birthstone";
+  src: url("@/assets/fonts/Birthstone/Birthstone-Regular.ttf");
+}
+
+@font-face {
+  font-family: "allura";
+  src: url("@/assets/fonts/Allura/Allura-Regular.ttf");
+}
+@font-face {
+  font-family: 'Bad Script';
+  src: url("@/assets/fonts/Bad_Script/BadScript-Regular.ttf");
+}
+@font-face {
+  font-family: 'Bungee Shade';
+  src: url("@/assets/fonts/Bungee_Shade/BungeeShade-Regular.ttf");
+}
+@font-face {
+  font-family: 'Bungee_Spice';
+  src: url("@/assets/fonts/Bungee_Spice/BungeeSpice-Regular.ttf");
+}
+@font-face {
+  font-family: 'chicle';
+  src: url("@/assets/fonts/Chicle/Chicle-Regular.ttf");
+}
+@font-face {
+  font-family: 'Engagement';
+  src: url("@/assets/fonts/Engagement/Engagement-Regular.ttf");
+}
+@font-face {
+  font-family: 'Kaushan_Script';
+  src: url("@/assets/fonts/Kaushan_Script/KaushanScript-Regular.ttf");
+}
+@font-face {
+  font-family: 'Lily Script One';
+  src: url("@/assets/fonts/Lily_Script_One/LilyScriptOne-Regular.ttf");
+}
+@font-face {
+  font-family: 'Lobster Two';
+  src: url("@/assets/fonts/Lobster_Two/LobsterTwo-Regular.ttf");
+}
+@font-face {
+  font-family: 'Niconne';
+  src: url("@/assets/fonts/Niconne/Niconne-Regular.ttf");
+}
+@font-face {
+  font-family: 'Norican';
+  src: url("@/assets/fonts/Norican/Norican-Regular.ttf");
+}
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  src: url("@/assets/fonts/Oleo_Script_Swash_Caps/OleoScriptSwashCaps-Regular.ttf");
+}
+@font-face {
+  font-family: 'Sail';
+  src: url("@/assets/fonts/Sail/Sail-Regular.ttf");
+}
+@font-face {
+  font-family: 'Style_Script';
+  src: url("@/assets/fonts/Style_Script/StyleScript-Regular.ttf");
+}
+.font-rochester {
+  font-family: "rochester", system-ui;
+}
+
+.font-cookie {
+  font-family: "cookie", system-ui;
+}
+
+.font-ubuntu {
+  font-family: "ubuntu", ui-monospace;
+}
+
+.font-poppins {
+  font-family: "poppins", ui-monospace;
+}
+
+.font-birthstone {
+  font-family: "birthstone", ui-monospace;
+}
+
+.font-allura {
+  font-family: "allura", ui-monospace;
+}
+
+.font-bad-script {
+  font-family: 'Bad Script', cursive;
+}
+
+.font-bungee-shade {
+  font-family: 'Bungee Shade', cursive;
+}
+
+.font-bungee-spice {
+  font-family: 'Bungee_Spice', cursive;
+}
+
+.font-chicle {
+  font-family: 'Chicle', cursive;
+}
+
+.font-engagement {
+  font-family: 'Engagement', cursive;
+}
+
+.font-kaushan-script {
+  font-family: 'Kaushan_Script', cursive;
+}
+
+.font-lili-script-one {
+  font-family: 'Lily Script One', cursive;
+}
+
+.font-lobster-two {
+  font-family: 'Lobster Two', cursive;
+}
+
+.font-niconne {
+  font-family: 'Niconne', cursive;
+}
+
+.font-norican {
+  font-family: 'Norican', cursive;
+}
+
+.font-oleo-script {
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.font-sail {
+  font-family: 'Sail', cursive;
+}
+
+.font-style-script {
+  font-family: 'Style_Script', cursive;
+}
