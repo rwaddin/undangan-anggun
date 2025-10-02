@@ -3,7 +3,9 @@
 </script>
 
 <template>
-<p>splash</p>
+<div class="min-h-screen bg-green-200">
+  sss
+</div>
 </template>
 
 <style scoped>
