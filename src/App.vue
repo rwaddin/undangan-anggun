@@ -1,4 +1,5 @@
 <script setup>
+import soundUrl from "@/assets/Raisa-AwalKisahSelamanya.mp3";
 import VueCountdown from '@chenfengyuan/vue-countdown';
 
 import {onMounted, ref, watchEffect} from 'vue';
@@ -10,17 +11,28 @@ import Congratulation from "@/components/congratulation.vue";
 import Footer from "@/components/footer.vue";
 import {useBrideStore} from "@/stores/bride.js";
 import {useRoute} from "vue-router";
-import Backsound from "@/components/backsound.vue";
+
+const audio = ref(new Audio(soundUrl));
 
 const route = useRoute();
 const store  = useBrideStore()
 const is_open = ref(false);
+const is_sound_play = ref(false)
 
 const countdown = () => {
   const now = new Date();
   const day = new Date("2025/10/14 09:00:00");
   return day-now;
 }
+
+const onOpen = () => {
+  audio.value.play().catch(err => {
+    console.warn("Playback blocked (needs user gesture):", err);
+  });
+  is_open.value = true;
+  is_sound_play.value = true;
+}
+
 
 watchEffect(()=>{
   console.log(route.query)
@@ -58,13 +70,19 @@ onMounted(() => {
           <div class="flex flex-col gap-5 items-center">
             <p class="text-center">Kepada Yth <br> Bapak/Ibu/Saudara/i :</p>
             <p class="font-bold text-3xl font-quicksand text-gray-100">{{ store.to }}</p>
-            <button @click="is_open = true" class="btn btn-soft bg-[#1c5278] text-white w-1/2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.5 19h-5.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4" /><path d="M3 7l9 6l2.983 -1.989l6.017 -4.011" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg> Buka Undangan</button>
+            <button @click="onOpen()" class="btn btn-soft bg-[#1c5278] text-white w-1/2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.5 19h-5.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4" /><path d="M3 7l9 6l2.983 -1.989l6.017 -4.011" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg> Buka Undangan</button>
             <p class="mt-5 px-20 text-center text-sm text-gray-200">Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar</p>
           </div>
         </div>
       </div>
       <div class="md:col-start-2 md:flex md:flex-col bg-sky-200" v-else>
-        <backsound/>
+        <div class="fixed h-10 w-10 flex justify-center items-center bottom-10 right-2 z-9999">
+          <div class="rounded-full p-2 bg-sky-600">
+            <svg @click="audio.play();is_sound_play=true" v-if="!is_sound_play" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="#fff"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
+            <svg @click="audio.pause();is_sound_play=false" v-else xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="#fff"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /><path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" /></svg>
+          </div>
+        </div>
+
         <splash/>
         <bride/>
         <schedule/>

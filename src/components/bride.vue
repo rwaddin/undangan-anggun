@@ -13,8 +13,8 @@ const store = useBrideStore()
       <div class="card-body bg-[url('/images/frame.png')] bg-cover p-10 flex flex-col justify-between items-center rounded gap-2" style="background-image: url('/images/frame.png');')">
         <img :src="i.photo" class="w-24 mask mask-hexagon " :alt="i.name" loading="lazy"/>
 
-        <p class="text-4xl font-engagement">{{i.name}}</p>
-        <p v-html="i.parent" class="text-center"/>
+        <p class="text-5xl font-engagement">{{i.name}}</p>
+        <p v-html="i.parent" class="text-center font-quicksand font-bold"/>
         <p class="text-center">{{i.address}}</p>
       </div>
     </div>
