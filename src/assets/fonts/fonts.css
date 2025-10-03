@@ -79,6 +79,15 @@
   font-family: 'Style_Script';
   src: url("@/assets/fonts/Style_Script/StyleScript-Regular.ttf");
 }
+@font-face {
+  font-family: 'Roboto';
+  src: url("@/assets/fonts/Roboto/static/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url("@/assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
+
 .font-rochester {
   font-family: "rochester", system-ui;
 }
@@ -153,4 +162,12 @@
 
 .font-style-script {
   font-family: 'Style_Script', cursive;
+}
+
+.font-roboto {
+  font-family: 'Roboto', cursive;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', cursive;
 }

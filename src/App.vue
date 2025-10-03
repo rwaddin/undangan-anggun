@@ -57,7 +57,7 @@ onMounted(() => {
           </div>
           <div class="flex flex-col gap-5 items-center">
             <p class="text-center">Kepada Yth <br> Bapak/Ibu/Saudara/i :</p>
-            <p class="font-bold text-3xl font-lobster-two text-gray-100">{{ store.to }}</p>
+            <p class="font-bold text-3xl font-quicksand text-gray-100">{{ store.to }}</p>
             <button @click="is_open = true" class="btn btn-soft bg-[#1c5278] text-white w-1/2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.5 19h-5.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4" /><path d="M3 7l9 6l2.983 -1.989l6.017 -4.011" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg> Buka Undangan</button>
             <p class="mt-5 px-20 text-center text-sm text-gray-200">Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar</p>
           </div>

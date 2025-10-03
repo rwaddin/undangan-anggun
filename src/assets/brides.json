@@ -22,17 +22,19 @@
       {
         "name": "Akad Nikah",
         "day": "Selasa",
-        "date": "12 Oktober 2025",
+        "date": "Oktober 2025",
         "time": "09:00 WIB",
-        "location": "Jl. Samiaji RT05/02 Pucung Lor, Kec.Kroya, Cilacap, Jawa Tengah",
+        "address_name": "Kediaman Mempelai Wanita",
+        "address": "Jl. Samiaji RT05/02 Pucung Lor, Kec.Kroya, Cilacap, Jawa Tengah",
         "maps": "https://maps.app.goo.gl/g3stVJVEExkmKRVx6"
       },
       {
         "name": "Resepsi",
         "day": "Selasa",
-        "date": "12 Oktober 2025",
+        "date": "Oktober 2025",
         "time": "10:00 WIB sd Selesai",
-        "location": "Jl. Samiaji RT05/02 Pucung Lor, Kec.Kroya, Cilacap, Jawa Tengah",
+        "address_name": "Kediaman Mempelai Wanita",
+        "address": "Jl. Samiaji RT05/02 Pucung Lor, Kec.Kroya, Cilacap, Jawa Tengah",
         "maps": "https://maps.app.goo.gl/g3stVJVEExkmKRVx6"
       }
     ],

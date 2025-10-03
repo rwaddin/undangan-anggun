@@ -14,13 +14,14 @@ const copyToClipboard = (text) => {
 </script>
 
 <template>
-<div class="p-5 py-10 bg-blue-100 flex flex-col gap-5 justify-center items-center">
+<img src="/images/bottom.webp" alt=""/>
+<div class="p-5 py-20 bg-[#DAEFF2] flex flex-col gap-5 justify-center items-center">
   <h2 class="text-5xl font-engagement">Amplop Digital</h2>
   <p class="text-center">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.
   </p>
   <br>
   <div class="w-3/4 flex flex-col gap-10">
-    <div v-for="i in store.bride.wallets" class="h-40 rounded-xl text-white flex flex-col justify-between bg-gradient-to-br from-blue-700 to-blue-500 w-full p-5">
+    <div v-for="i in store.bride.wallets" class="h-40 rounded-xl text-white flex flex-col justify-between bg-gradient-to-bl from-sky-500 to-sky-800 w-full p-5">
       <div class="text-xl font-bold">{{ i.bank }}</div>
       <div>
         <div class="bottom-12 left-4 tracking-widest text-lg font-mono flex justify-between w-full">
@@ -40,6 +41,7 @@ const copyToClipboard = (text) => {
     Nomor rekening disalin ✅
   </div>
 </transition>
+
 </template>
 
 <style scoped>
