@@ -4,24 +4,23 @@
     "girlUname": "Anggun",
     "boy": "Feri Andrianto",
     "boyUname": "Feri",
-    "boyParentMom" : "xxx",
-    "boyParentDad" : "xxx",
     "brides": [
       {
         "name": "Feri Andrianto",
-        "parent": "Putra dari Herman Supandi Paidi & Ngadiyah",
-        "address":" Sigong, Pucung Lor, Kroya, Cilacap, Jawa Tengah",
-        "photo": "/images"
+        "parent": "Putra dari<br> Herman Supandi Paidi & Ngadiyah",
+        "address":"Karangwangkal, Adireja wetan, Kec. Adipala, Kab. Cilacap, Jawa Tengah",
+        "photo": "/images/boy.webp"
       },
       {
         "name": "Anggun Wijayanti",
-        "parent": "Putri dari Ahmad Irfangi & Sulhayati",
-        "address":"Karangwangkal Adireja wetan, Adipala, Cilacap, Jawa Tengah"
+        "parent": "Putri dari<br> Ahmad Irfangi & Sulhayati",
+        "address":"Sigong, Pucung Lor, Kec. Kroya, Kab. Cilacap, Jawa Tengah",
+        "photo": "/images/girl.webp"
       }
     ],
     "schedules": [
       {
-        "name": "Akad nikah",
+        "name": "Akad Nikah",
         "day": "Selasa",
         "date": "12 Oktober 2025",
         "time": "09:00 WIB",
