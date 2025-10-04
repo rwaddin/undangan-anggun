@@ -9,7 +9,7 @@ const store = useBrideStore()
   <div class="flex-col flex gap-3 p-5 ">
     <p>Akad Nikah & Repsi</p>
     <p class="text-5xl font-quicksand font-bold" data-aos="fade-up" data-aos-delay="300">{{store.bride.boyUname}} <br>& {{store.bride.girlUname}} </p>
-    <p class="">{{store.bride.schedules[0].day}}, {{store.bride.schedules[0].date}}</p>
+    <p class="">{{store.bride.schedules[0].day}}, 14 {{store.bride.schedules[0].date}}</p>
     <p data-aos="fade-up" data-aos-delay="500">Ketika suatu perbedaan di ciptakan untuk saling menyempurnakan. Begitulah cara Allah mempersatukan dua insan dengan cara yang tak pernah bisa diduga oleh manusia dalam satu pernikahan.</p>
   </div>
   <div class="rotate-180">

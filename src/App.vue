@@ -36,8 +36,10 @@ const onOpen = () => {
   is_sound_play.value = true;
 }
 
-
 watchEffect(()=>{
+  if (typeof route.query.to === "undefined" ){
+    return location.href = "https://addin.web.id"
+  }
   store.to = route?.query.to ? route.query.to : "Sahabat";
 })
 
