@@ -64,7 +64,6 @@ const onSave = () => {
 const getCongrats = async () => {
   getOnce("anggunferi")
     .then((data)=> {
-      console.log(data);
       records.value = sortDesc(data);
     })
     .catch(() => records.value = {});

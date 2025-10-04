@@ -8,9 +8,9 @@ const store = useBrideStore()
 <div class="min-h-[90vh] flex-col flex justify-end bg-[url(/images/br.webp)] bg-cover bg-center">
   <div class="flex-col flex gap-3 p-5 ">
     <p>Akad Nikah & Repsi</p>
-    <p class="text-5xl font-quicksand font-bold">{{store.bride.boyUname}} <br>& {{store.bride.girlUname}} </p>
+    <p class="text-5xl font-quicksand font-bold" data-aos="fade-up" data-aos-delay="300">{{store.bride.boyUname}} <br>& {{store.bride.girlUname}} </p>
     <p class="">{{store.bride.schedules[0].day}}, {{store.bride.schedules[0].date}}</p>
-    <p>Ketika suatu perbedaan di ciptakan untuk saling menyempurnakan. Begitulah cara Allah mempersatukan dua insan dengan cara yang tak pernah bisa diduga oleh manusia dalam satu pernikahan.</p>
+    <p data-aos="fade-up" data-aos-delay="500">Ketika suatu perbedaan di ciptakan untuk saling menyempurnakan. Begitulah cara Allah mempersatukan dua insan dengan cara yang tak pernah bisa diduga oleh manusia dalam satu pernikahan.</p>
   </div>
   <div class="rotate-180">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"  fill="#1C5278">

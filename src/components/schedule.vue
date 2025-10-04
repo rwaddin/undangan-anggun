@@ -15,7 +15,7 @@ const store = useBrideStore()
       </svg>
     </div>
     <p class="text-5xl font-engagement">Save The Date</p>
-  <div class="w-full bg-white rounded-lg shadow-md overflow-hidden" v-for="(i, j) in store.bride.schedules">
+  <div class="w-full bg-white rounded-lg shadow-md overflow-hidden" v-for="(i, j) in store.bride.schedules" data-aos="fade-up" data-aos-delay="300">
     <div class="flex">
       <div class="bg-[#1C5278] text-white px-6 flex items-center justify-center" v-if="j===0">
         <p class="font-bold text-2xl [writing-mode:vertical-rl] rotate-180">{{i.name}}</p>

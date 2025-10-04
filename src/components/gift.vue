@@ -21,7 +21,7 @@ const copyToClipboard = (text) => {
   </p>
   <br>
   <div class="w-3/4 flex flex-col gap-10">
-    <div v-for="i in store.bride.wallets" class="h-40 rounded-xl text-white flex flex-col justify-between bg-gradient-to-bl from-sky-500 to-sky-800 w-full p-5">
+    <div v-for="i in store.bride.wallets" class="h-40 rounded-xl text-white flex flex-col justify-between bg-gradient-to-bl from-sky-500 to-sky-800 w-full p-5" data-aos="fade-up" data-aos-delay="300">
       <div class="text-xl font-bold">{{ i.bank }}</div>
       <div>
         <div class="bottom-12 left-4 tracking-widest text-lg font-mono flex justify-between w-full">
