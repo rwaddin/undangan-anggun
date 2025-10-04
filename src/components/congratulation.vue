@@ -1,25 +1,87 @@
 <script setup>
 import {useBrideStore} from "@/stores/bride.js";
-import {reactive} from "vue";
+import {onMounted, reactive, ref} from "vue";
+import {getOnce} from "@/firebase/read";
+import {rsvpCreate} from "@/firebase/write";
 
 const store = useBrideStore();
+const records = ref({})
 const form = reactive({
   name: store.to,
   address: "",
   isAttending: 'yes',
-  text: ""
+  text: "",
+  id: "",
+  time: 0
 })
 
 const formatDate = (unix) =>{
-  const date = new Date(unix * 1000);
-  return date.toLocaleString("id-ID", {
+  const date = new Date(unix);
+  const tanggal = date.toLocaleDateString("id-ID", {
     year: "numeric",
     month: "long",
     day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
   });
+
+  const waktu = date.toLocaleTimeString("id-ID", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  return `${tanggal} ${waktu}`;
 }
+
+const onSave = () => {
+  try{
+    if (form.text.trim().length === 0){
+      throw "Masukan ucapan terlebih dahulu"
+    }
+  }catch(err){
+    alert(err)
+  }
+
+  form.id = crypto.randomUUID();
+  form.time = Date.now();
+  // console.log(form)
+  // return
+  rsvpCreate("anggunferi",form)
+    .then(res => {
+      form.name= store.to;
+      form.address= "";
+      form.isAttending= 'yes'
+      form.text= "";
+      form.id= "";
+      // form.time= 0;
+
+      getCongrats()
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  console.log(form)
+}
+
+const getCongrats = async () => {
+  getOnce("anggunferi")
+    .then((data)=> {
+      console.log(data);
+      records.value = sortDesc(data);
+    })
+    .catch(() => records.value = {});
+}
+
+const sortDesc = (obj) => {
+  let sortDesc = Object.keys(obj).map(key => obj[key]);
+  sortDesc.sort(function(a, b){
+    return b.time - a.time;
+  });
+  return sortDesc;
+}
+
+
+onMounted(async () => {
+  await getCongrats()
+})
 </script>
 
 <template>
@@ -52,22 +114,24 @@ const formatDate = (unix) =>{
     <div class="flex gap-3 items-center">
       <textarea type="text" class="textarea w-full" placeholder="Katakan sesuatu untuk kedua mempelai :)" required v-model="form.text"></textarea>
     </div>
-    <button type="button" class="btn btn-soft w-1/2">Kirim Ucapan <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg></button>
+    <button type="button" class="btn btn-soft bg-transparent border-white text-white w-1/2" @click="onSave">Kirim Ucapan
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>
+    </button>
   </div>
 
-  <div class="card bg-base-100 mt-5 card-sm max-h-screen overflow-y-auto rounded" v-if="store.congrats.length > 0">
-    <div class="card-body">
-      <div v-for="(item, index) in store.congrats" :key="index" class="space-y-1">
+  <div class="card bg-white mt-5 card-sm max-h-screen overflow-y-auto rounded" v-if="Object.keys(records).length > 0">
+    <div class="card-body bg-[url(/images/br.webp)] bg-cover">
+      <div v-for="(item, index) in records" :key="index" class="space-y-1">
 
         <div class="flex items-center justify-between">
-          <h2 class=" text-[#DAB45C] text-sm">{{ item.name.replace(/\b\w/g, char => char.toUpperCase()) }} &mdash; <span>{{ item.address }}</span></h2>
-            <span class="text-[10px] px-2 py-0.5 rounded-full" :class="item.isAttending ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'">
-            {{ item.isAttending ? 'Hadir' : 'Tidak Hadir' }}
+          <h2 class="text-[#1C5278] font-thin text-sm">{{ item.name.replace(/\b\w/g, char => char.toUpperCase()) }} <span v-if="item.address.length !==0">&mdash; {{ item.address.replace(/\b\w/g, char => char.toUpperCase()) }}</span></h2>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" :class="item.isAttending ==='yes' ? 'bg-[#1C5278] text-white' : 'bg-red-400 text-white'">
+            {{ item.isAttending === 'yes' ? 'Hadir' : 'Tidak Hadir' }}
           </span>
         </div>
 
         <p class="text-gray-700 italic text-xs mb-0">“{{ item.text }}” - <span>{{ formatDate(item.time) }}</span></p>
-        <div class="divider h-0 m-0.5"/>
+        <div class="divider h-0 m-1"/>
       </div>
     </div>
   </div>
