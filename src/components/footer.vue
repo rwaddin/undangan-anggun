@@ -5,7 +5,7 @@ const store = useBrideStore()
 </script>
 
 <template>
-  <div class="flex flex-col w-full text-center gap-5  pt-10">
+  <div class="flex flex-col w-full text-center pt-10">
     <div class="relative">
       <div class="flex flex-col w-full gap-3">
         <p>Atas kehadiran dan do'a restu dari Bapak/ibu :</p>
@@ -21,7 +21,6 @@ const store = useBrideStore()
     </div>
     <br>
     <div class="w-full bg-[#1C5278] text-white py-4 flex justify-between px-2 font-poppins mt-10 text-sm relative">
-
       <div class="absolute bottom-12 -left-0 w-full rotate-180">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"  fill="#1C5278">
           <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
@@ -43,6 +42,10 @@ const store = useBrideStore()
         </a>
       </div>
     </div>
+    <div class="bg-[#1C5278] h-25">
+      &nbsp;
+    </div>
+
   </div>
 </template>
 

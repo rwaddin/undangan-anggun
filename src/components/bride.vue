@@ -5,7 +5,7 @@ const store = useBrideStore()
 </script>
 
 <template>
-  <div class="flex flex-col gap-5 w-full items-center justify-center p-10 bg-[#1C5278]">
+  <div class="flex flex-col gap-5 w-full items-center justify-center p-10 bg-[#1C5278]" id="bride">
     <p class=" text-3xl font-cookie  text-white">Assalamu’alaikum Wr. Wb.</p>
     <p class="text-center  text-white">Dengan memohon rahmat dan ridho Allah SWT yang telah menciptakan Makhluk-Nya secara berpasang-pasangan, kami bermaksud menyelenggarakan pernikahan kami :</p>
 

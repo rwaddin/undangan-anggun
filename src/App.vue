@@ -13,6 +13,7 @@ import Congratulation from "@/components/congratulation.vue";
 import Footer from "@/components/footer.vue";
 import {useBrideStore} from "@/stores/bride.js";
 import {useRoute} from "vue-router";
+import BottomNavbar from "@/components/BottomNavbar.vue";
 
 const audio = ref(new Audio(soundUrl));
 
@@ -82,8 +83,8 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="md:col-start-2 md:flex md:flex-col bg-sky-200" v-else data-aos="fade-up">
-        <div class="fixed h-10 w-10 flex justify-center items-center bottom-10 right-2 z-9999">
+      <div class="md:col-start-2 md:flex md:flex-col bg-sky-200" v-else>
+        <div class="fixed h-10 w-10 flex justify-center items-center bottom-20 right-2 z-9999">
           <div class="rounded-full p-2 bg-[#1C5278] text-white" :class="is_sound_play ? 'animate-[spin_3s_linear_infinite] ':''">
             <svg @click="audio.play();is_sound_play=true" v-if="!is_sound_play" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-disc-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.044 16.04a9 9 0 0 0 -12.082 -12.085m-2.333 1.688a9 9 0 0 0 6.371 15.357c2.491 0 4.73 -1 6.36 -2.631" /><path d="M11.298 11.288a1 1 0 1 0 1.402 1.427" /><path d="M7 12c0 -1.38 .559 -2.629 1.462 -3.534m2.607 -1.38c.302 -.056 .613 -.086 .931 -.086" /><path d="M12 17a4.985 4.985 0 0 0 3.551 -1.48m1.362 -2.587c.057 -.302 .087 -.614 .087 -.933" /><path d="M3 3l18 18" /></svg>
             <svg @click="audio.pause();is_sound_play=false" v-else xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none" stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-disc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M7 12a5 5 0 0 1 5 -5" /><path d="M12 17a5 5 0 0 0 5 -5" /></svg>
@@ -97,7 +98,9 @@ onMounted(() => {
         <congratulation/>
         <Footer/>
       </div>
+    <BottomNavbar :is_open="is_open" />
     </div>
+
   </div>
 </template>
 

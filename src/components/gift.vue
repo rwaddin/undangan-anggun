@@ -15,9 +15,9 @@ const copyToClipboard = (text) => {
 
 <template>
 <img src="/images/bottom.webp" alt=""/>
-<div class="p-5 py-20 bg-[#DAEFF2] flex flex-col gap-5 justify-center items-center">
+<div class="p-5 py-20 bg-[#DAEFF2] flex flex-col gap-5 justify-center items-center" id="gift">
   <h2 class="text-5xl font-engagement">Amplop Digital</h2>
-  <p class="text-center">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.
+  <p class="text-center">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.
   </p>
   <br>
   <div class="w-3/4 flex flex-col gap-10">
