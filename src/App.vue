@@ -37,9 +37,9 @@ const onOpen = () => {
 }
 
 watchEffect(()=>{
-  if (typeof route.query.to === "undefined" ){
-    return location.href = "https://addin.web.id"
-  }
+  // if (typeof route.query.to === "undefined" ){
+  //   return location.href = "https://addin.web.id"
+  // }
   store.to = route?.query.to ? route.query.to : "Sahabat";
 })
 
