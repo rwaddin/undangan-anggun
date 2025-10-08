@@ -5,9 +5,10 @@ const store = useBrideStore()
 </script>
 
 <template>
-  <div class="p-5 py-20 flex flex-col gap-5 justify-center items-center" id="gallery">
+  <div class="p-5 pb-20 pt-5 flex flex-col gap-5 justify-center items-center relative bg-[url(/images/br.webp)] bg-contain" id="gallery">
+<!--    <img src="/images/flower.webp" class="absolute w-1/3 -top-20 -right-10">-->
     <h2 class="text-5xl font-engagement">Gallery of Love</h2>
-    <p class="text-sm px-6 text-center">Dalam setiap bidikan kamera, tersimpan kisah dua hati yang dipertemukan takdir, dan kini menyatu dalam janji suci.</p>
+    <p class="text-sm px-6 text-center z-9999">Dalam setiap bidikan kamera, tersimpan kisah dua hati yang dipertemukan takdir, dan kini menyatu dalam janji suci.</p>
 
 
     <div class="grid grid-cols-2 gap-4 auto-rows-[150px]">
