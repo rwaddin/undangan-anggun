@@ -17,8 +17,7 @@ const copyToClipboard = (text) => {
 <img src="/images/bottom.webp" alt=""/>
 <div class="p-5 py-20 bg-[#DAEFF2] flex flex-col gap-5 justify-center items-center" id="gift">
   <h2 class="text-5xl font-engagement">Amplop Digital</h2>
-  <p class="text-center">Doa restu anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.
-  </p>
+  <p class="text-sm px-5 text-center">Doa restu Anda adalah hadiah terindah bagi kami. Namun, jika berkenan berbagi tanda kasih, Anda dapat melalui fitur amplop digital</p>
   <br>
   <div class="w-3/4 flex flex-col gap-10">
     <div v-for="i in store.bride.wallets" class="h-40 rounded-xl text-white flex flex-col justify-between bg-gradient-to-bl from-sky-500 to-sky-800 w-full p-5" data-aos="fade-up" data-aos-delay="300">

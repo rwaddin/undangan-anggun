@@ -14,6 +14,7 @@ import Footer from "@/components/footer.vue";
 import {useBrideStore} from "@/stores/bride.js";
 import {useRoute} from "vue-router";
 import BottomNavbar from "@/components/BottomNavbar.vue";
+import Gallery from "@/components/gallery.vue";
 
 const audio = ref(new Audio(soundUrl));
 
@@ -95,6 +96,7 @@ onMounted(() => {
         <splash/>
         <bride/>
         <schedule/>
+        <gallery/>
         <gift/>
         <congratulation/>
         <Footer/>
