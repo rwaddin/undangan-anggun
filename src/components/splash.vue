@@ -5,8 +5,8 @@ const store = useBrideStore()
 </script>
 
 <template>
-<div class="min-h-[90vh] flex-col flex justify-end bg-[url(/images/br.webp)] bg-cover bg-center">
-  <div class="flex-col flex gap-3 p-5 ">
+<div class="min-h-[90vh] flex-col flex justify-end bg-[linear-gradient(#7A8388,#44444E),url('/images/bride/splash.avif')] bg-center bg-cover bg-blend-overlay contrast-[.9] brightness-[.9]">
+  <div class="flex-col flex gap-3 p-5 text-white">
     <p>Akad Nikah & Repsi</p>
     <p class="text-5xl font-quicksand font-bold" data-aos="fade-up" data-aos-delay="300">{{store.bride.boyUname}} <br>& {{store.bride.girlUname}} </p>
     <p class="">{{store.bride.schedules[0].day}}, 14 {{store.bride.schedules[0].date}}</p>

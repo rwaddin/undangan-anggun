@@ -58,29 +58,28 @@ onMounted(() => {
   <div class="bg-gradient-to-tr from-[#bacbd6] to-[#497493]">
 
     <div class="md:grid md:grid-cols-3">
-      <div class="md:col-start-2 bg-gradient-to-b from-[#bacbd6] to-[#497493] h-screen overflow-y-auto flex items-center justify-center flex-col gap-5 shadow" v-if="!is_open">
+      <div v-if="!is_open" class="md:col-start-2 bg-gradient-to-b  bg-[linear-gradient(#7A8388,#222831),url('/images/bride/home.avif')] bg-center bg-cover bg-blend-overlay h-screen overflow-y-auto flex items-center justify-center flex-col gap-5 shadow text-white">
         <div class="flex flex-col justify-between items-center h-full my-10">
-          <div class="text-center">
-            <img src="/images/dove.png" class="w-50" loading="lazy" alt="dove" />
-            <p class="mt-5" data-aos="fade-up">THE WEDDING OF</p> <br>
+          <div class="flex flex-col justify-center items-center gap-2 ">
+            <img src="/images/dove.png" class="w-1/6" loading="lazy" alt="dove" />
+            <p data-aos="fade-up">THE WEDDING OF</p>
             <p class="text-4xl font-lobster-two font-bold" data-aos="fade-up" data-aos-delay="300">{{ store.bride.boyUname }} & {{ store.bride.girlUname }}</p>
           </div>
-          <div class="flex flex-col items-center gap-3">
-            <img src="/images/bride.png" class="w-50" loading="lazy" alt="bride" />
-            <vue-countdown :time="countdown()" v-slot="{ days, hours, minutes, seconds }">
-              <div class="flex gap-3 justify-center">
-                <div class="bg-[#1c5278] h-16 w-16 text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{days}}</span>  <span class="text-xs">Hari</span></div>
-                <div class="bg-[#1c5278] h-16 w-16 text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{hours}}</span>  <span class="text-xs">Jam</span></div>
-                <div class="bg-[#1c5278] h-16 w-16 text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{minutes}}</span>  <span class="text-xs">Menit</span></div>
-                <div class="bg-[#1c5278] h-16 w-16 text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{seconds}}</span>  <span class="text-xs">Detik</span></div>
-              </div>
-            </vue-countdown>
 
-          </div>
+
           <div class="flex flex-col gap-5 items-center">
             <p class="text-center">Kepada Yth <br> Bapak/Ibu/Saudara/i :</p>
             <p class="font-bold text-3xl font-quicksand text-gray-100" data-aos="fade-up" data-aos-delay="300">{{ store.to }}</p>
-            <button @click="onOpen()" class="btn btn-soft bg-[#1c5278] text-white w-1/2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.5 19h-5.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4" /><path d="M3 7l9 6l2.983 -1.989l6.017 -4.011" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg> Buka Undangan</button>
+            <button @click="onOpen()" class="btn btn-soft bg-[#222831] text-white w-1/2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.5 19h-5.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4" /><path d="M3 7l9 6l2.983 -1.989l6.017 -4.011" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg> Buka Undangan</button>
+            <br>
+            <vue-countdown :time="countdown()" v-slot="{ days, hours, minutes, seconds }">
+              <div class="flex gap-3 justify-center">
+                <div class="bg-[#222831] h-16 w-16 border text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{days}}</span>  <span class="text-xs">Hari</span></div>
+                <div class="bg-[#222831] h-16 w-16 border text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{hours}}</span>  <span class="text-xs">Jam</span></div>
+                <div class="bg-[#222831] h-16 w-16 border text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{minutes}}</span>  <span class="text-xs">Menit</span></div>
+                <div class="bg-[#222831] h-16 w-16 border text-white flex justify-center flex-col items-center rounded"><span class="text-xl font-bold">{{seconds}}</span>  <span class="text-xs">Detik</span></div>
+              </div>
+            </vue-countdown>
             <p class="mt-5 px-20 text-center text-sm text-gray-200">Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar</p>
           </div>
         </div>

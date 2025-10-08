@@ -5,7 +5,7 @@ const store = useBrideStore()
 </script>
 
 <template>
-  <div class="flex flex-col w-full text-center pt-10">
+  <div class="flex flex-col w-full text-center pt-10 ">
     <div class="relative">
       <div class="flex flex-col w-full gap-3">
         <p>Atas kehadiran dan do'a restu dari Bapak/ibu :</p>
